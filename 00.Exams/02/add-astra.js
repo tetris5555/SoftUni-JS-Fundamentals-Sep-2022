@@ -7,7 +7,7 @@ function solve(arr) {
     if (re.test(text)) {
         for (const m of text.match(re)) {
             const [, item, exp, cal, ] = m.split(/#|\|/);
-            const msg = `Item: ${item}, Best before: ${exp}, Nutrition: ${cal}`;
+            const msg = `Item: ${item}, Best before: ${exp}, Nutrition: ${cal}`; // item, expiration date, calories
             out.push(msg);
             totalCal += Number(cal);
         }
@@ -15,8 +15,3 @@ function solve(arr) {
     console.log(`You have food to last you for: ${Math.floor(totalCal / 2000)} days!`);
     out.forEach(e => console.log(e));
 }
-
-
-solve([
-    '#Bread#19/03/21#4000#|Invalid|03/03.20||Apples|08/10/20|200||Carrots|06/08/20|500||Not right|6.8.20|5|'
-    ]);
