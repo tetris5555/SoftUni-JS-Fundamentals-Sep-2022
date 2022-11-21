@@ -7,7 +7,7 @@ function solve(arr) {
     if (re.test(text)) {
         for (const m of text.match(re)) {
             const [, item, exp, cal, ] = m.split(/#|\|/);
-            const msg = `Item: ${item}, Best before: ${exp}, Nutrition: ${cal}`;
+            const msg = `Item: ${item}, Best before: ${exp}, Nutrition: ${cal}`; // item, expiration date, calories
             out.push(msg);
             totalCal += Number(cal);
         }
